@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/enhanced-button";
-import { Menu, X, Users, Calendar, Briefcase, MessageCircle, User } from "lucide-react";
+import { Menu, X, Users, Calendar, Briefcase, MessageCircle, User, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
@@ -27,32 +27,46 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
-                  >
-                    <Icon size={16} />
-                    {item.name}
-                  </a>
-                );
-              })}
-            </div>
+        <div className="ml-10 flex items-baseline space-x-4">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
+              >
+                <Icon size={16} />
+                {item.name}
+              </a>
+            );
+          })}
+          <a
+            href="/events"
+            className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
+          >
+            <Calendar size={16} />
+            Events
+          </a>
+          <a
+            href="/fundraising"
+            className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
+          >
+            <Heart size={16} />
+            Fundraising
+          </a>
+        </div>
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button variant="hero" size="sm">
-              Join Network
-            </Button>
-          </div>
+        <div className="hidden md:flex items-center space-x-4">
+          <Button variant="ghost" size="sm" asChild>
+            <a href="/login">Sign In</a>
+          </Button>
+          <Button variant="hero" size="sm">
+            Join Network
+          </Button>
+        </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
