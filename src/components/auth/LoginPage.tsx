@@ -19,11 +19,11 @@ const LoginPage = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate API call
+    // Simulate API call - redirect to alumni directory after login
     setTimeout(() => {
       setIsLoading(false);
-      // Handle login logic here
-      console.log("Login attempt:", { email, password, rememberMe });
+      // In real app, would handle authentication and redirect
+      window.location.href = "/alumni";
     }, 2000);
   };
 

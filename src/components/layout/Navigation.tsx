@@ -49,8 +49,8 @@ const Navigation = () => {
           <Button variant="ghost" size="sm" asChild>
             <a href="/login">Sign In</a>
           </Button>
-          <Button variant="hero" size="sm">
-            Join Network
+          <Button variant="hero" size="sm" asChild>
+            <a href="/signup">Join Network</a>
           </Button>
         </div>
 
@@ -89,11 +89,11 @@ const Navigation = () => {
             );
           })}
           <div className="px-3 pt-4 pb-2 space-y-2">
-            <Button variant="ghost" size="sm" className="w-full justify-start">
-              Sign In
+            <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
+              <a href="/login">Sign In</a>
             </Button>
-            <Button variant="hero" size="sm" className="w-full">
-              Join Network
+            <Button variant="hero" size="sm" className="w-full" asChild>
+              <a href="/signup">Join Network</a>
             </Button>
           </div>
         </div>

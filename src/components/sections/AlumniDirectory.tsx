@@ -4,10 +4,12 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, MapPin, Briefcase, GraduationCap, Linkedin, Mail, MessageCircle } from "lucide-react";
+import AlumniProfileDetail from "./AlumniProfileDetail";
 
 const AlumniDirectory = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterBy, setFilterBy] = useState("all");
+  const [selectedAlumnus, setSelectedAlumnus] = useState<any>(null);
 
   // Mock alumni data
   const alumni = [
@@ -72,6 +74,24 @@ const AlumniDirectory = () => {
     
     return matchesSearch && matchesFilter;
   });
+
+  const handleConnect = (alumnus: any) => {
+    setSelectedAlumnus(alumnus);
+  };
+
+  if (selectedAlumnus) {
+    return (
+      <AlumniProfileDetail 
+        alumnus={{
+          ...selectedAlumnus,
+          batch: selectedAlumnus.graduationYear,
+          skills: selectedAlumnus.expertise,
+          position: selectedAlumnus.title
+        }} 
+        onBack={() => setSelectedAlumnus(null)} 
+      />
+    );
+  }
 
   return (
     <section id="alumni" className="py-20 bg-muted/30">
@@ -163,7 +183,12 @@ const AlumniDirectory = () => {
               )}
 
               <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => handleConnect(alum)}
+                >
                   <Mail size={14} />
                   Connect
                 </Button>
