@@ -1,17 +1,17 @@
 import Navigation from "@/components/layout/Navigation";
-import EventsSection from "@/components/sections/EventsSection";
+import AlumniDirectory from "@/components/sections/AlumniDirectory";
 import Footer from "@/components/layout/Footer";
 
-const Events = () => {
+const Alumni = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-16">
-        <EventsSection />
+        <AlumniDirectory />
       </div>
       <Footer />
     </div>
   );
 };
 
-export default Events;
+export default Alumni;

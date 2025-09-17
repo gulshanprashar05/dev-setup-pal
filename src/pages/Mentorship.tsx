@@ -1,17 +1,17 @@
 import Navigation from "@/components/layout/Navigation";
-import EventsSection from "@/components/sections/EventsSection";
+import MentorshipSection from "@/components/sections/MentorshipSection";
 import Footer from "@/components/layout/Footer";
 
-const Events = () => {
+const Mentorship = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-16">
-        <EventsSection />
+        <MentorshipSection />
       </div>
       <Footer />
     </div>
   );
 };
 
-export default Events;
+export default Mentorship;

@@ -40,7 +40,7 @@ const LoginPage = () => {
           {/* Header */}
           <div className="text-center">
             <Link to="/" className="inline-block">
-              <h1 className="text-3xl font-bold gradient-text mb-2">AlumNexus</h1>
+              <h1 className="text-3xl font-bold gradient-text mb-2">ReuniFi</h1>
             </Link>
             <h2 className="text-2xl font-bold text-foreground">Welcome back</h2>
             <p className="text-muted-foreground mt-2">
@@ -155,7 +155,7 @@ const LoginPage = () => {
             <p className="text-muted-foreground">
               Don't have an account?{" "}
               <Link to="/signup" className="text-primary hover:underline font-medium">
-                Join AlumNexus
+                Join ReuniFi
               </Link>
             </p>
           </div>

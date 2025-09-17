@@ -26,20 +26,23 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Connecting Past,
-            <span className="block text-secondary">Empowering Future</span>
+            Connecting Alumni,
+            <span className="block text-secondary">Students & Institutions</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Join the largest centralized alumni platform that connects graduates, students, and institutions in one powerful digital hub.
+            ReuniFi brings together alumni, students, and institutions in one digital hub. 
+            Build connections, find mentors, discover opportunities, and give back to your community.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button variant="gradient" size="xl" className="group">
-              Join Our Network
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            <Button variant="gradient" size="xl" className="group" asChild>
+              <a href="/login">
+                Get Started
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button variant="outline" size="xl" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-              Explore Platform
+              Learn More
             </Button>
           </div>
         </div>

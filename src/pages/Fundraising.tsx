@@ -1,5 +1,6 @@
 import Navigation from "@/components/layout/Navigation";
 import FundraisingSection from "@/components/sections/FundraisingSection";
+import Footer from "@/components/layout/Footer";
 
 const Fundraising = () => {
   return (
@@ -8,6 +9,7 @@ const Fundraising = () => {
       <div className="pt-16">
         <FundraisingSection />
       </div>
+      <Footer />
     </div>
   );
 };

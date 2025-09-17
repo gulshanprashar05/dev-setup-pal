@@ -7,11 +7,11 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Alumni Directory", href: "#alumni", icon: Users },
-    { name: "Events", href: "#events", icon: Calendar },
-    { name: "Jobs", href: "#jobs", icon: Briefcase },
-    { name: "Forums", href: "#forums", icon: MessageCircle },
-    { name: "Mentorship", href: "#mentorship", icon: User },
+    { name: "Home", href: "/", icon: Users },
+    { name: "Alumni Directory", href: "/alumni", icon: Users },
+    { name: "Events", href: "/events", icon: Calendar },
+    { name: "Mentorship", href: "/mentorship", icon: User },
+    { name: "Fundraising", href: "/fundraising", icon: Heart },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold gradient-text">AlumNexus</h1>
+              <h1 className="text-2xl font-bold gradient-text">ReuniFi</h1>
             </div>
           </div>
 
@@ -41,20 +41,6 @@ const Navigation = () => {
               </a>
             );
           })}
-          <a
-            href="/events"
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
-          >
-            <Calendar size={16} />
-            Events
-          </a>
-          <a
-            href="/fundraising"
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-all duration-200"
-          >
-            <Heart size={16} />
-            Fundraising
-          </a>
         </div>
           </div>
 
