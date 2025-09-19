@@ -11,54 +11,66 @@ const AlumniDirectory = () => {
   const [filterBy, setFilterBy] = useState("all");
   const [selectedAlumnus, setSelectedAlumnus] = useState<any>(null);
 
-  // Mock alumni data
+  // Real alumni data with actual photos
   const alumni = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Gulshan Prashar",
       title: "Senior Software Engineer",
       company: "Google",
-      location: "San Francisco, CA",
-      graduationYear: "2018",
+      location: "Ghaziabad, UP",
+      graduationYear: "2022",
       department: "Computer Science",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=150&h=150&fit=crop&crop=face",
-      expertise: ["AI/ML", "Web Development", "Product Management"],
+      image: "/src/assets/gulshan.jpeg",
+      expertise: ["AI/ML", "Web Development", "Full Stack Development"],
       isAvailableForMentorship: true,
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Mishthi Jamini",
       title: "Product Manager",
       company: "Microsoft",
-      location: "Seattle, WA",
-      graduationYear: "2016",
-      department: "Business Administration",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      location: "Noida, UP",
+      graduationYear: "2021",
+      department: "Information Technology",
+      image: "/src/assets/mishthi.jpeg",
       expertise: ["Product Strategy", "Data Analytics", "Leadership"],
       isAvailableForMentorship: true,
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      title: "UX Design Lead",
+      name: "Ayush Singh",
+      title: "Frontend Developer",
       company: "Adobe",
-      location: "Austin, TX",
-      graduationYear: "2019",
-      department: "Design",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      expertise: ["UX/UI Design", "Design Systems", "User Research"],
+      location: "Delhi, India",
+      graduationYear: "2023",
+      department: "Computer Science",
+      image: "/src/assets/ayush.jpeg",
+      expertise: ["React", "JavaScript", "UI/UX Design"],
       isAvailableForMentorship: false,
     },
     {
       id: 4,
-      name: "David Kumar",
+      name: "Alok Pandey",
       title: "Data Scientist",
       company: "Netflix",
-      location: "Los Angeles, CA",
+      location: "Mumbai, India",
       graduationYear: "2020",
-      department: "Statistics",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      expertise: ["Machine Learning", "Statistics", "Python"],
+      department: "Electronics Engineering",
+      image: "/src/assets/alok.jpeg",
+      expertise: ["Machine Learning", "Python", "Data Analysis"],
+      isAvailableForMentorship: true,
+    },
+    {
+      id: 5,
+      name: "Aush Tomar",
+      title: "Software Developer",
+      company: "Amazon",
+      location: "Bangalore, India",
+      graduationYear: "2022",
+      department: "Computer Science",
+      image: "/src/assets/tomar.jpeg",
+      expertise: ["Java", "Cloud Computing", "Backend Development"],
       isAvailableForMentorship: true,
     },
   ];
@@ -207,7 +219,7 @@ const AlumniDirectory = () => {
 
         <div className="text-center mt-12">
           <Button variant="hero" size="lg">
-            View All Alumni ({alumni.length * 25}+)
+            View All Alumni ({alumni.length * 20}+)
           </Button>
         </div>
       </div>

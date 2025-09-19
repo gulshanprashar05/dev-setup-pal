@@ -7,39 +7,63 @@ const MentorshipSection = () => {
   const mentors = [
     {
       id: 1,
-      name: "Dr. Sarah Johnson",
-      title: "VP of Engineering",
+      name: "Gulshan Prashar",
+      title: "Senior Software Engineer",
       company: "Google",
       rating: 4.9,
       sessions: 127,
       expertise: ["Career Growth", "Technical Leadership", "AI/ML"],
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?w=100&h=100&fit=crop&crop=face",
+      image: "/src/assets/gulshan.jpeg",
       price: "Free",
       nextAvailable: "Tomorrow 2:00 PM",
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Mishthi Jamini", 
       title: "Senior Product Manager",
       company: "Microsoft",
       rating: 4.8,
       sessions: 89,
       expertise: ["Product Strategy", "Leadership", "Startups"],
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      image: "/src/assets/mishthi.jpeg",
       price: "Free",
       nextAvailable: "Friday 10:00 AM",
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      title: "Design Director",
+      name: "Ayush Singh",
+      title: "Frontend Developer",
       company: "Adobe",
       rating: 5.0,
       sessions: 156,
-      expertise: ["UX Design", "Design Systems", "Career Transition"],
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      expertise: ["React Development", "UI/UX Design", "Career Transition"],
+      image: "/src/assets/ayush.jpeg",
       price: "Free",
       nextAvailable: "Monday 3:00 PM",
+    },
+    {
+      id: 4,
+      name: "Alok Pandey",
+      title: "Data Scientist",
+      company: "Netflix",
+      rating: 4.7,
+      sessions: 94,
+      expertise: ["Machine Learning", "Data Analytics", "Python"],
+      image: "/src/assets/alok.jpeg",
+      price: "Free",
+      nextAvailable: "Wednesday 11:00 AM",
+    },
+    {
+      id: 5,
+      name: "Aush Tomar",
+      title: "Software Developer",
+      company: "Amazon",
+      rating: 4.6,
+      sessions: 73,
+      expertise: ["Backend Development", "Cloud Computing", "Java"],
+      image: "/src/assets/tomar.jpeg",
+      price: "Free",
+      nextAvailable: "Thursday 4:00 PM",
     },
   ];
 
@@ -175,7 +199,7 @@ const MentorshipSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="gradient" size="xl" className="group">
+          <Button variant="gradient" size="xl" className="group" onClick={() => window.location.href = '/ai-match'}>
             Get Your AI Match
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Button>

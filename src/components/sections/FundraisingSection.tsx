@@ -48,19 +48,19 @@ const FundraisingSection = () => {
   ];
 
   const impactStats = [
-    { icon: DollarSign, label: "Total Raised", value: "$12.5M", growth: "+23%" },
+    { icon: DollarSign, label: "Total Raised", value: "₹10.4Cr", growth: "+23%" },
     { icon: Users, label: "Active Donors", value: "2,847", growth: "+15%" },
     { icon: Target, label: "Goals Achieved", value: "47", growth: "+8%" },
     { icon: Award, label: "Impact Projects", value: "156", growth: "+31%" },
   ];
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-    }).format(amount);
+    }).format(amount * 83); // Convert USD to INR (approximate rate)
   };
 
   const getProgressPercentage = (raised: number, goal: number) => {

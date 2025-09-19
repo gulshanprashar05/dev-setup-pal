@@ -10,7 +10,7 @@ const EventsSection = () => {
       title: "Annual Alumni Reunion 2024",
       date: "December 15, 2024",
       time: "6:00 PM - 11:00 PM",
-      location: "Grand Ballroom, University Campus",
+      location: "Main Auditorium, ITS Engineering College",
       type: "Reunion",
       attendees: 450,
       maxAttendees: 500,
@@ -150,7 +150,7 @@ const EventsSection = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="gradient" size="lg">
+                  <Button variant="gradient" size="lg" onClick={() => window.location.href = '/event-register'}>
                     Register Now
                   </Button>
                   <Button variant="outline" size="lg">
@@ -210,7 +210,7 @@ const EventsSection = () => {
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button variant="hero" size="sm" className="flex-1">
+                  <Button variant="hero" size="sm" className="flex-1" onClick={() => window.location.href = '/event-register'}>
                     Register
                   </Button>
                   <Button variant="ghost" size="sm">
