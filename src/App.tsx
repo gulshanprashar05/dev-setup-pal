@@ -13,6 +13,7 @@ import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 import AIMatch from "./pages/AIMatch";
 import EventRegister from "./pages/EventRegister";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/signup" element={<Signup />} />
           <Route path="/ai-match" element={<AIMatch />} />
           <Route path="/event-register" element={<EventRegister />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

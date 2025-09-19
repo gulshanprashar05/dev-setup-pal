@@ -73,6 +73,30 @@ const AlumniDirectory = () => {
       expertise: ["Java", "Cloud Computing", "Backend Development"],
       isAvailableForMentorship: true,
     },
+    {
+      id: 6,
+      name: "Abhishek Kumar",
+      title: "DevOps Engineer",
+      company: "Meta",
+      location: "Gurgaon, India",
+      graduationYear: "2023",
+      department: "Computer Science",
+      image: "/src/assets/abhi-2.jpeg",
+      expertise: ["DevOps", "AWS", "Docker", "Kubernetes"],
+      isAvailableForMentorship: true,
+    },
+    {
+      id: 7,
+      name: "Arun Sharma",
+      title: "Full Stack Developer",
+      company: "Flipkart",
+      location: "Bangalore, India",
+      graduationYear: "2021",
+      department: "Information Technology",
+      image: "/src/assets/arun.jpeg",
+      expertise: ["Node.js", "React", "MongoDB", "Express"],
+      isAvailableForMentorship: true,
+    },
   ];
 
   const filteredAlumni = alumni.filter(alum => {
@@ -219,7 +243,7 @@ const AlumniDirectory = () => {
 
         <div className="text-center mt-12">
           <Button variant="hero" size="lg">
-            View All Alumni ({alumni.length * 20}+)
+            View All Alumni ({alumni.length * 15}+)
           </Button>
         </div>
       </div>
